@@ -17,6 +17,8 @@
 *.nlo
 *.out
 *.pdfsync
+*.pdf
+*.swp
 *.ps
 *.snm
 *.synctex.gz
