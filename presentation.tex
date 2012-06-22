@@ -7,6 +7,9 @@
 \usepackage{graphicx}
 \graphicspath{{./img/}}
 
+\usepackage{natbib}
+\renewcommand{\bibsection}{\subsubsection*{\bibname } }
+
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 
@@ -31,6 +34,48 @@
 	\frametitle{foo}
 	bar
 \end{frame}
+
+\section{Key systems}
+\subsection*{}
+\begin{frame}
+	\frametitle{foo}
+	bar
+\end{frame}
+
+\section{Relay attacks}
+\subsection*{}
+\begin{frame}
+	\frametitle{foo}
+	bar
+\end{frame}
+
+\section{Solutions}
+\subsection*{}
+\begin{frame}
+	\frametitle{foo}
+	bar
+\end{frame}
+
+\section{Summary \& Literature}
+\subsection*{}
+	\begin{frame}
+		\frametitle{foo}
+		bar
+	\end{frame}
+	\begin{frame}
+	\frametitle{Literature}
+		\nocite{*}
+		\def\newblock{}
+		\bibliography{presentation}
+		\bibliographystyle{plain}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Thank you!}
+		\begin{center}
+			Thank you for your attention!
+		\end{center}
+	\end{frame}	
 
 \end{document}
 \end{input}

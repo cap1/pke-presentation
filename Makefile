@@ -5,8 +5,8 @@ show: all
 
 all: $(PDF) $(GNUPLOT) $(INKSCAPE) 
 	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
-#	bibtex ./tmp/presentation
-#	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
+	bibtex ./tmp/presentation
+	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
 	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
 	mv ./tmp/presentation.pdf .
 
@@ -16,17 +16,17 @@ nobib:
 
 evince:
 	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
-#	bibtex ./tmp/presentation
-#	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
+	bibtex ./tmp/presentation
+	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
 	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
 	mv ./tmp/presentation.pdf .
 	evince presentation.pdf &> /dev/null
 
 okular:
 	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
-#	bibtex ./tmp/presentation
-#	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
-#	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
+	bibtex ./tmp/presentation
+	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
+	pdflatex --halt-on-error --output-directory=./tmp ./presentation.tex
 	mv ./tmp/presentation.pdf .
 	okular ./presentation.pdf 2> /dev/null
 
