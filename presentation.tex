@@ -31,8 +31,13 @@
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{foo}
-		bar
+		\frametitle{Terms}
+			\begin{description}
+				\item[PKE system]\hfill \\
+						\textbf{p}assive \textbf{k}eyless \textbf{e}ntry system
+				\item[CID] \hfill \\
+					\textbf{C}ustomer \textbf{I}dentification \textbf{D}evice
+			\end{description}
 	\end{frame}
 	
 \section{Key systems}
@@ -69,18 +74,24 @@
 	\begin{frame}
 	\frametitle{Proper localization}
 		\begin{itemize}
-			\item underlying problem
+			\item relocating signal emission
+			\item wormhole attacks
+			\item circumvents higer level authentication
 		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 	\frametitle{Relay over the cable}
+		\begin{center}
 			\includegraphics[scale=0.85]{img/franc_relay_over_the_wire.png} 
+		\end{center}
 	\end{frame}
 	
 	\begin{frame}
-	\frametitle{Relay over the wire}
-			\includegraphics[scale=0.75]{img/franc_relay_over_the_air.png} 
+		\frametitle{Relay over the wire}
+		\begin{center}
+			\includegraphics[scale=0.75]{img/franc_relay_over_the_air.png} 	
+		\end{center}
 	\end{frame}
 
 \section{Solutions}
@@ -99,7 +110,8 @@
 	\begin{frame}
 		%TODO fix size
 	\frametitle{Literature}
-		\nocite{*}
+	\tiny
+	\nocite{*}
 		\def\newblock{}
 		\bibliography{presentation}
 		\bibliographystyle{plain}
