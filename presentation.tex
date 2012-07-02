@@ -55,7 +55,8 @@
 	\begin{frame}
 		\frametitle{Remote key Systems}
 		\begin{itemize}
-			\item Button to open
+			\item Button to opens
+			\item operate at RF 	%EU 433 MHz
 			\item physical key to ignite engine
 		\end{itemize}
 	\end{frame}
@@ -63,20 +64,33 @@
 	\begin{frame}
 		\frametitle{Passive keyless entry systems}
 		\begin{itemize}
-			\item car opens when key approaches
+			\item car opens when CID is in range
 			\item engine can be ignited, if the key is in the car
 			\item physical backup key
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{PKES in detail}
+		\begin{enumerate}
+			\item Pulling handle transmits a LF-signal
+			\item CID wakes up and responds in RF
+			\item if response is correct, the vehicle opens
+		\end{enumerate}
+		\begin{itemize}
+			\item same holds for ingiting engine
+			\item usually enhanced by RFID
 		\end{itemize}
 	\end{frame}
 
 \section{Relay attacks}
 \subsection*{}
 	\begin{frame}
-	\frametitle{Proper localization}
+	\frametitle{Introduction}
 		\begin{itemize}
-			\item relocating signal emission
-			\item wormhole attacks
-			\item circumvents higer level authentication
+			\item relocating signal emission \& reception
+			\item underlying problem: proper localization in wireless networks
+			\item circumvents higher level authentication
 		\end{itemize}
 	\end{frame}
 	
@@ -96,10 +110,19 @@
 
 	\begin{frame}
 		\frametitle{This works in practice}
+		\begin{itemize}
+			\item simple \& inexpensive
+			\item tested by \citet*{relayAttacksFranc}
+			\item all ten systems vulnerable
+		\end{itemize}
 	\end{frame}
 
 	\begin{frame}
 		\frametitle{Scenario}
+		\begin{itemize}
+			\item Supermarket
+			\item Office
+		\end{itemize}
 	\end{frame}
 
 \section{Solutions}
@@ -116,10 +139,11 @@
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{twp frequencies}
+		\frametitle{two frequencies}
 			\begin{itemize}
 				\item use two frequencies
 				\item makes relaying more difficult %TODO because..
+				\item alternative: seperate commuication channels
 			\end{itemize}
 	\end{frame}
 
@@ -128,6 +152,7 @@
 			\begin{itemize}
 				\item be quick
 				\item be strict on timing
+				\item requires fast hardware
 			\end{itemize}
 	\end{frame}
 
@@ -143,8 +168,8 @@
 	\tiny
 	\nocite{*}
 		\def\newblock{}
+		\bibliographystyle{apalike}
 		\bibliography{presentation}
-		\bibliographystyle{plain}
 	\end{frame}
 
 	\begin{frame}
