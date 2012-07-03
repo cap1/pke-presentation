@@ -119,14 +119,6 @@
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{Scenarios}
-		\begin{itemize}
-			\item Supermarket
-			\item Office
-		\end{itemize}
-	\end{frame}
-
-	\begin{frame}
 		\frametitle{This works in practice}
 		\begin{itemize}
 			\item simple \& inexpensive
@@ -160,30 +152,51 @@
 		\end{table}
 	\end{frame}
 
-\section{Solutions}
+	\begin{frame}
+		\frametitle{Results of tests}
+		\begin{itemize}
+			\item attack works on all systems
+			\item for ``convinient'' attack, amplification is required
+			\item relay can be established over long distances
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Scenarios}
+		\begin{itemize}
+			\item Supermarket
+			\item Office
+		\end{itemize}
+	\end{frame}
+
+\section{Proposed Solutions}
 \subsection*{}
 	\begin{frame}
 		\frametitle{}
 		\begin{description}
 			\item[short term] \hfill \\
-				fall back to mechanical keys
+				\begin{itemize}
+					\item fall back to mechanical keys 
+					\item highlight action on the CID
+				\end{itemize}
 			\item[long term] \hfill \\
-					multi channel \\
-					distance bounding protocols
+				\begin{itemize}
+					\item	multi channel \citep{multichannelPrevRelay}
+					\item distance bounding protocols \citep{distanceBoundingProtocols}
+				\end{itemize}
 		\end{description}
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{two frequencies}
+		\frametitle{Multichannel communication}
 			\begin{itemize}
-				\item use two frequencies
+				\item use two frequencies or medias
 				\item makes relaying more difficult %TODO because..
-				\item alternative: seperate commuication channels
 			\end{itemize}
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{Distance bounding}
+		\frametitle{Distance bounding protocols}
 			\begin{itemize}
 				\item be quick
 				\item be strict on timing
