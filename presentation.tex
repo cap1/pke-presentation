@@ -5,6 +5,7 @@
 \usepackage{natbib}
 \usepackage{textcomp}
 \usepackage{graphicx}
+\usepackage{booktabs}
 \graphicspath{{./img/}}
 
 \usepackage{natbib}
@@ -93,6 +94,15 @@
 			\item circumvents higher level authentication
 		\end{itemize}
 	\end{frame}
+
+	\begin{frame}
+		\frametitle{Two thieves}
+		\begin{itemize}
+			\item thief 1 next to the vehicle
+			\item thief 2 near the CID
+			\item relay between both thieves
+		\end{itemize}
+	\end{frame}
 	
 	\begin{frame}
 	\frametitle{Relay over the cable}
@@ -109,6 +119,14 @@
 	\end{frame}
 
 	\begin{frame}
+		\frametitle{Scenarios}
+		\begin{itemize}
+			\item Supermarket
+			\item Office
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
 		\frametitle{This works in practice}
 		\begin{itemize}
 			\item simple \& inexpensive
@@ -118,11 +136,28 @@
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{Scenario}
-		\begin{itemize}
-			\item Supermarket
-			\item Office
-		\end{itemize}
+		\frametitle{Results of tests}
+		\tiny
+		\begin{table}[t]
+			\centering
+			\begin{tabular}{l r l r l r l}
+				\toprule
+				Car model	&	\multicolumn{2}{l}{Maximum Delay}	&	\multicolumn{2}{l}{Key Response (std dev)}	&	\multicolumn{2}{l}{Key Response Time Spread}\\
+				\midrule
+						1 		&	500 			&\textmu s	&	1782  &	\textmu s		(\textpm 8)	&	21		&\textmu s \\
+						2 		&	5000			& \textmu s	&	11376 & \textmu s  (\textpm 15)		&	47		&\textmu s \\
+						4 		&	500 			&\textmu s	&	-		&										&	- 		&	\\
+						5 		&	1000			& \textmu s	&	5002	& \textmu s  	(\textpm 4)		&	11		&\textmu s \\
+						6 		&	10000-20000	& \textmu s	&	23582 & \textmu s 	 (\textpm 196)	&	413	&	\textmu s \\
+						7 		&	620 			&\textmu s	&	1777	& \textmu s  	(\textpm 12)	&	25		&\textmu s \\
+						8 		&	620 			&\textmu s	&	437	& \textmu s  	(\textpm 70)	&	162	&	\textmu s \\
+						9 		&	2000			& \textmu s	&	1148	& \textmu s  	(\textpm 243)	&	436	&	\textmu s \\
+						10 	&	35 			& \textmu s	&	2177	&\textmu s  	(\textpm 8)		&	12		&\textmu s \\
+				\bottomrule
+			\end{tabular}
+			\caption{Experimentally tested maximum delay, key response time and spread per model, from \cite{relayAttacksFranc}}
+			\label{tab:francTimings}
+		\end{table}
 	\end{frame}
 
 \section{Solutions}
@@ -133,7 +168,7 @@
 			\item[short term] \hfill \\
 				fall back to mechanical keys
 			\item[long term] \hfill \\
-					different frequencies \\
+					multi channel \\
 					distance bounding protocols
 		\end{description}
 	\end{frame}
