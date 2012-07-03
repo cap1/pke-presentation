@@ -18,6 +18,7 @@
 
 \title{Attacks on wireless localization\\ The case of PKES}
 \author{Christian Müller}
+\date{4 July 2012}
 
 \section{Introduction}
 \subsection*{}
@@ -28,10 +29,6 @@
 	\end{frame}
 
 	\begin{frame}
-		\tableofcontents
-	\end{frame}
-
-	\begin{frame}
 		\frametitle{Terms}
 			\begin{description}
 				\item[PKE system]\hfill \\
@@ -39,6 +36,10 @@
 				\item[CID] \hfill \\
 					\textbf{C}ustomer \textbf{I}dentification \textbf{D}evice
 			\end{description}
+	\end{frame}
+
+	\begin{frame}
+		\tableofcontents
 	\end{frame}
 	
 \section{Key systems}
@@ -201,6 +202,7 @@
 			\begin{itemize}
 				\item use two frequencies or medias
 				\item makes relaying more difficult %TODO because..
+				\item more difficult to implement
 			\end{itemize}
 	\end{frame}
 
@@ -209,8 +211,19 @@
 			\begin{itemize}
 				\item be quick
 				\item be strict on timing
-				\item requires fast hardware
+				\item has vulnerabilities
 			\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Distance bounding protocol}
+			\begin{enumerate}
+				\item A commits to a nonce
+				\item A sends nonce in reverse bitorder to B and starts timer
+				\item B will responds with the xored nonce in correct bit order
+				\item A stops timer upon receiving of the correctly xored nonce
+				\item A deduces distance from time-of-flight
+			\end{enumerate}
 	\end{frame}
 
 \section{Summary \& Literature}
@@ -220,7 +233,7 @@
 			\begin{itemize}
 				\item PKE systems are vulnerable to relayattacks 
 				\item Attacks can be carried out easily
-				\item Distance bounding protocols can prevent relayattacks
+				\item Solutions are at hand, but not free from vulnerabilities
 			\end{itemize}
 	\end{frame}
 	\begin{frame}
